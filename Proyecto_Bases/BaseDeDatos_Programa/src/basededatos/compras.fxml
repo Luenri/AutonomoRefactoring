@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="935.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basededatos.ComprasController">
+   <children>
+      <Label layoutX="415.0" layoutY="14.0" prefHeight="35.0" prefWidth="165.0" text="MULTICHECK">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="84.0" prefHeight="35.0" prefWidth="101.0" text="Compra">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="112.0" layoutX="817.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/multicheck.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="84.0" layoutY="143.0" prefHeight="21.0" prefWidth="54.0" text="Cliente:" />
+      <Label layoutX="474.0" layoutY="143.0" prefHeight="21.0" prefWidth="73.0" text="Fecha:" />
+      <Label layoutX="755.0" layoutY="567.0" prefHeight="21.0" prefWidth="54.0" text="Total:" />
+      <TextField fx:id="cedula" layoutX="174.0" layoutY="138.0" prefHeight="31.0" prefWidth="205.0" promptText="# cedula" />
+      <TextField fx:id="fecha" layoutX="572.0" layoutY="138.0" prefHeight="31.0" prefWidth="205.0" promptText="Año-Mes-Dia" />
+      <TextField fx:id="total" editable="false" layoutX="827.0" layoutY="562.0" prefHeight="31.0" prefWidth="78.0" />
+      <Button layoutX="182.0" layoutY="610.0" mnemonicParsing="false" onAction="#guardarDatos" text="Guardar" />
+      <Button layoutX="276.0" layoutY="610.0" mnemonicParsing="false" onAction="#limpiarCampos" text="Limpiar" />
+      <Button layoutX="376.0" layoutY="610.0" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
+      <Label layoutX="70.0" layoutY="187.0" prefHeight="35.0" prefWidth="224.0" text="Detalle de Compra">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboProductos" layoutX="70.0" layoutY="222.0" onAction="#productosCom" prefWidth="150.0" promptText="Productos" />
+      <ComboBox fx:id="comboServicios" layoutX="70.0" layoutY="265.0" onAction="#serviciosCom" prefWidth="150.0" promptText="Servicios" />
+      <TextField fx:id="codPro" editable="false" layoutX="310.0" layoutY="222.0" prefHeight="31.0" prefWidth="54.0" />
+      <Label layoutX="250.0" layoutY="227.0" text="Codigo:" />
+      <Label layoutX="381.0" layoutY="227.0" text="Precio Unitario:" />
+      <TextField fx:id="precioPro" editable="false" layoutX="497.0" layoutY="222.0" prefHeight="31.0" prefWidth="63.0" />
+      <Label layoutX="584.0" layoutY="227.0" text="Cantidad:" />
+      <TextField fx:id="cantidadPro" layoutX="659.0" layoutY="222.0" prefHeight="31.0" prefWidth="54.0" />
+      <Button layoutX="745.0" layoutY="222.0" mnemonicParsing="false" onAction="#añadirProducto" text="Añadir Producto" />
+      <Label layoutX="250.0" layoutY="270.0" text="Codigo:" />
+      <TextField fx:id="codSer" editable="false" layoutX="310.0" layoutY="265.0" prefHeight="31.0" prefWidth="54.0" />
+      <Label layoutX="381.0" layoutY="270.0" text="Precio Unitario:" />
+      <TextField fx:id="precioSer" editable="false" layoutX="497.0" layoutY="265.0" prefHeight="31.0" prefWidth="63.0" />
+      <Label layoutX="584.0" layoutY="270.0" text="Cantidad:" />
+      <TextField fx:id="cantidadSer" layoutX="659.0" layoutY="265.0" prefHeight="31.0" prefWidth="54.0" />
+      <Button layoutX="745.0" layoutY="265.0" mnemonicParsing="false" onAction="#añadirServicio" prefHeight="31.0" prefWidth="128.0" text="Añadir Servicio" />
+      <VBox fx:id="visor" layoutX="70.0" layoutY="303.0" prefHeight="252.0" prefWidth="804.0" spacing="10.0" style="-fx-background-color: #1E90FF;" />
+      <TextField fx:id="numCompra" editable="false" layoutX="183.0" layoutY="86.0" prefHeight="31.0" prefWidth="63.0" />
+      <Label fx:id="mensaje" layoutX="567.0" layoutY="615.0" prefHeight="21.0" prefWidth="343.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

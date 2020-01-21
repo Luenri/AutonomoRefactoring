@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="839.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basededatos.MostrarInventariosController">
+   <children>
+      <Label layoutX="351.0" layoutY="14.0" prefHeight="35.0" prefWidth="165.0" text="MULTICHECK">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="112.0" layoutX="706.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/multicheck.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="97.0" prefHeight="35.0" prefWidth="138.0" text="Inventarios">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="212.0" layoutY="99.0" mnemonicParsing="false" onAction="#agregarInventario" style="-fx-background-color: #1E90FF;" text="Agregar nuevo" />
+      <ComboBox fx:id="filtro" layoutX="57.0" layoutY="139.0" prefWidth="150.0" promptText="Filtrar por:" />
+      <TextField fx:id="variableFiltro" layoutX="218.0" layoutY="139.0" />
+      <Button layoutX="461.0" layoutY="139.0" mnemonicParsing="false" onAction="#filtrarInventario" text="Filtrar" />
+      <Button layoutX="571.0" layoutY="139.0" mnemonicParsing="false" onAction="#regresar" text="Regresar al menu" />
+      <TableView fx:id="tablaInventarios" layoutX="52.0" layoutY="186.0" prefHeight="200.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="codigo" prefWidth="102.0" text="Codigo" />
+          <TableColumn fx:id="descripcion" prefWidth="238.0" text="Descripcion" />
+            <TableColumn fx:id="ubicacion" minWidth="0.0" prefWidth="198.0" text="Ubicacion" />
+            <TableColumn fx:id="categoria" minWidth="0.0" prefWidth="185.0" text="Categoria" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#modificar" text="Modificar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <TextField fx:id="txCodigo" editable="false" layoutX="144.0" layoutY="398.0" prefHeight="31.0" prefWidth="51.0" visible="false" />
+      <TextField fx:id="txDescripcion" layoutX="144.0" layoutY="436.0" visible="false" />
+      <Label fx:id="lbCodigo" layoutX="52.0" layoutY="403.0" text="Codigo:" visible="false" />
+      <Label fx:id="lbDescripcion" layoutX="52.0" layoutY="441.0" text="Descripcion:" visible="false" />
+      <Label fx:id="lbUbicacion" layoutX="399.0" layoutY="403.0" text="Ubicacion:" visible="false" />
+      <Label fx:id="lbCategoria" layoutX="400.0" layoutY="441.0" text="Categoria:" visible="false" />
+      <TextField fx:id="txUbicacion" layoutX="490.0" layoutY="398.0" visible="false" />
+      <TextField fx:id="txCategoria" layoutX="490.0" layoutY="436.0" visible="false" />
+      <Button fx:id="modify" layoutX="719.0" layoutY="414.0" mnemonicParsing="false" onAction="#modificarElemento" text="Modificar" visible="false" />
+   </children>
+</Pane>

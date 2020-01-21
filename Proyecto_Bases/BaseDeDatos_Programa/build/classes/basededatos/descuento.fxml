@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="413.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basededatos.DescuentoController">
+   <children>
+      <Label layoutX="46.0" layoutY="33.0" text="Calculo de Descuento">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="89.0" text="cantidad a calcular:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cantidad" layoutX="228.0" layoutY="87.0" prefHeight="31.0" prefWidth="126.0" />
+      <Label layoutX="71.0" layoutY="174.0" text="El descuento es de:" />
+      <TextField fx:id="dscto" editable="false" layoutX="228.0" layoutY="169.0" prefHeight="31.0" prefWidth="126.0" />
+      <Button layoutX="174.0" layoutY="225.0" mnemonicParsing="false" onAction="#calcular" text="calcular" />
+      <Label layoutX="46.0" layoutY="131.0" text="Porcentaje de dscto:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="porcentaje" layoutX="228.0" layoutY="129.0" prefHeight="31.0" prefWidth="126.0" />
+   </children>
+</Pane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="1065.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basededatos.MostrarClientesController">
+   <children>
+      <TableView fx:id="tablaClientes" layoutX="52.0" layoutY="204.0" prefHeight="235.0" prefWidth="990.0">
+         <columns>
+            <TableColumn fx:id="cedula" prefWidth="153.0" text="Cedula" />
+            <TableColumn fx:id="nombre" prefWidth="161.0" text="Nombre" />
+            <TableColumn fx:id="apellido" prefWidth="170.0" text="Apellido" />
+            <TableColumn fx:id="fecha" prefWidth="151.0" text="Fecha Nacimiento" />
+            <TableColumn fx:id="celular" prefWidth="143.0" text="Celular" />
+            <TableColumn fx:id="direccion" prefWidth="196.0" text="Direccion" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#modificar" text="Modificar" />
+                  <MenuItem mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+               </items>
+            </ContextMenu>
+         </contextMenu></TableView>
+      <Label layoutX="67.0" layoutY="83.0" prefHeight="35.0" prefWidth="99.0" text="Clientes">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFiltrar" layoutX="506.0" layoutY="138.0" mnemonicParsing="false" onAction="#filttrarDatos" text="Filtrar" />
+      <ComboBox fx:id="filtrado" layoutX="67.0" layoutY="138.0" prefWidth="150.0" promptText="Filtrar por:" />
+      <TextField fx:id="opcionFiltrado" layoutX="274.0" layoutY="138.0" />
+      <Label layoutX="357.0" layoutY="14.0" prefHeight="45.0" prefWidth="190.0" text="MULTICHECK">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="83.0" fitWidth="125.0" layoutX="764.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../recursos/multicheck.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="217.0" layoutY="83.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #1E90FF;" text="Agregar Nuevo">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="btnRegresar" layoutX="719.0" layoutY="138.0" mnemonicParsing="false" onAction="#regresar" text="Regresar al menu" />
+      <Label fx:id="lbCedula" layoutX="76.0" layoutY="451.0" text="Cedula:" visible="false" />
+      <TextField fx:id="txCedula" layoutX="170.0" layoutY="446.0" prefHeight="31.0" prefWidth="186.0" visible="false" />
+      <TextField fx:id="txNombre" layoutX="170.0" layoutY="484.0" visible="false" />
+      <TextField fx:id="txApellido" layoutX="170.0" layoutY="524.0" visible="false" />
+      <Label fx:id="lbNombre" layoutX="79.0" layoutY="489.0" text="Nombre:" visible="false" />
+      <Label fx:id="lbApellido" layoutX="79.0" layoutY="529.0" text="Apellido:" visible="false" />
+      <Label fx:id="lbFecha" layoutX="430.0" layoutY="451.0" text="Fecha N.:" visible="false" />
+      <Label fx:id="lbCelular" layoutX="428.0" layoutY="489.0" text="Celular:" visible="false" />
+      <Label fx:id="lbDireccion" layoutX="434.0" layoutY="529.0" text="Direccion:" visible="false" />
+      <TextField fx:id="txFecha" layoutX="521.0" layoutY="446.0" visible="false" />
+      <TextField fx:id="txcelular" layoutX="521.0" layoutY="484.0" visible="false" />
+      <TextField fx:id="txDireccion" layoutX="521.0" layoutY="524.0" visible="false" />
+      <Button fx:id="modify" layoutX="889.0" layoutY="474.0" mnemonicParsing="false" onAction="#modificarElemento" text="Modificar" visible="false" />
+   </children>
+</Pane>
